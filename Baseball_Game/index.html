@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Baseball</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="main">
+      <h1 class="title">숫자 야구 게임 ⚾️</h1>
+      <section class="section">
+        <form class="form">
+          <label for="question" class="label-question"
+            >숫자를 입력해주세요 😃</label
+          >
+          <input
+            type="number"
+            id="question"
+            name="question"
+            min="0"
+            max="9999"
+            size="4"
+            class="ball-input"
+          />
+          <button class="try-button">도전🙋🏻‍♀️</button>
+        </form>
+        <div class="ball-result">결과🚀</div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
