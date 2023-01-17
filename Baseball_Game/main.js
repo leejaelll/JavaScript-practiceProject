@@ -1,13 +1,9 @@
-// 1. 랜덤으로 만들어진 4자리의 숫자를 맞추는 게임
-// 2. 사용되는 숫자는 0~9로 구성되어 있으며, 각 숫자는 한 번씩만 사용 가능
-// 3. 숫자와 위치가 맞으면 스트라이크(S), 숫자만 맞으면 볼(B)
-// 4. 숫자가 하나도 맞지 않을 경우, 아웃(OUT)으로 표시된다.
-// 5. 총 10번의 기회가 주어진다.
-
+/* ------------------------------ querySelector ----------------------------- */
 const $question = document.querySelector('#question');
 const $ballResult = document.querySelector('.ball-result');
 const $tryButton = document.querySelector('.try-button');
 
+/* ---------------------------------- STATE --------------------------------- */
 // 상태로 가지고 있어야할 것 - 게임 횟수, 시도한 횟수, 야구게임 자리수,
 const BASEBALL_STATE = {
   chance: 10,
@@ -17,6 +13,7 @@ const BASEBALL_STATE = {
 };
 const { chance, digit } = BASEBALL_STATE;
 
+/* -------------------------------- function -------------------------------- */
 // 숫자 생성하는 함수
 const makeRandomNumber = () => {
   const passwordArray = Array(digit).fill(null);
@@ -38,7 +35,6 @@ const makeRandomNumber = () => {
 makeRandomNumber();
 
 let { trial, password } = BASEBALL_STATE;
-console.log(BASEBALL_STATE);
 
 // 각 숫자가 하나 씩 사용되었는지 확인하기
 const hasDuplicateNumber = (number) =>
@@ -138,10 +134,3 @@ document.querySelector('form').addEventListener('submit', (e) => {
     $tryButton.disabled = true;
 }
 });
-
-// 볼이 있는지
-// 스트라이크가 있는지
-// 아웃인지 확인하고
-// textContent로 알려준다.
-// 추가로 기회도 몇회 남았는지 알려줘야한다.
-// 기회가 종료되었다면 입력하는 창을 지우고, 결과만 보여주기
