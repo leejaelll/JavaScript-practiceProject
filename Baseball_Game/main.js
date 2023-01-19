@@ -83,7 +83,7 @@ const isCorrect = (answer) => {
 
 // 아웃인지 확인하는 함수
 // prettier-ignore
-const checkOutCount = (answer) => (answer + '').split('').every((element) => password.split('').indexOf(element) === -1);
+const checkOutCount = (answer) => answer.split('').every((element) => password.split('').indexOf(element) === -1);
 
 /* ---------------------------------- event --------------------------------- */
 document.querySelector('form').addEventListener('submit', (e) => {
