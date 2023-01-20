@@ -6,4 +6,6 @@
 
 : 숫자 야구 게임
 
-### 드럼 만들기 👉🏻 [Play Drumkit]()
+### 드럼 만들기 👉🏻 [Play Drumkit](https://github.com/leejaelll/JavaScript-practiceProject/tree/main/Drumkit)
+
+: 키보드 입력과 마우스 클릭으로 드럼 오디오를 재생하는 기능 구현
